@@ -8,11 +8,15 @@ namespace TekEnable.Models
 
         [Required]
         [EmailAddress]
-        public string EmailAddress { get; set; }
-       
-        [Required]
-        public string HowYouHeard { get; set; }
+        [Display(Name = "Email Addrress")]
+        public string EmailAddress { get; set; } = string.Empty;
 
-        public string SignUpReason { get; set; }
+        [Required]
+        [Display(Name = "How did you hear about us")]
+
+        public string HowYouHeard { get; set; } = string.Empty;
+        [Display(Name = "Reason for Signing Up")]
+
+        public string SignUpReason { get; set; } = string.Empty;
     }
 }

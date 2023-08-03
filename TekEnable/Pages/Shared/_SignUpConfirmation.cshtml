@@ -1,0 +1,17 @@
+﻿@model TekEnable.Models.Subscription
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info mt-3">
+        @ViewBag.Message
+    </div>
+}
+
+<div>
+    <form id="return-form" method="post" asp-controller="Subscriptions" asp-action="ReturnToSignUp">
+        <input type="hidden" asp-for="EmailAddress" value="@Model.EmailAddress" />
+        <input type="hidden" asp-for="HowYouHeard" value="@Model.HowYouHeard" />
+        <input type="hidden" asp-for="SignUpReason" value="@Model.SignUpReason" />
+        <button type="submit" class="btn btn-secondary mt-3">Return</button>
+    </form>
+</div>

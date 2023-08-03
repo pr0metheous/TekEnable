@@ -9,6 +9,7 @@ namespace TekEnable.Data
         {
         }
 
+
         public DbSet<Subscription> Subscriptions { get; set; }
 
     }
